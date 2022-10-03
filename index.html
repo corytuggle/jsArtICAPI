@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Art Institute of Chicago API</title>
+</head>
+<body>
+    <h1>From the Art Institute of Chicago:<br>A Sampling of Monet, Van Gogh, and Hokusai</h1>
+    <div class="container">    
+    
+        <!-- ARTic Banner -->
+        <div class="gallery-container w-4 h-3">
+            <div class="gallery-item">
+                <div class="image banner" onclick="openInNewTab('https:/\/www.artic.edu');">
+                    <img src="/images/bannerArtIC.jpg" 
+                    alt="Art Institute of Chicago banner">
+                </div>
+
+                <div class="text">
+                        The Art Institute of Chicago                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Fig 1 - Monet: Water Lilies -->
+        <div class="gallery-container w-2 h-3">
+            <div class="gallery-item">
+                <div class="image" id="16568" 
+                onclick="openModal(event); getArtwork(this.id, event)">
+                    <img src="images/monetWaterLilies_1933.1157.jpg" 
+                    alt="Painting of a pond seen up close spotted with thickly 
+                    painted pink and white water lilies and a shadow across the 
+                    top third of the picture." 
+                    >
+                </div>
+
+                <div class="text">
+                    Claude Monet:<br>Water Lilies
+                </div>
+            </div>
+        </div> 
+        
+        <!-- Fig 2 - Van Gogh: Self Portrait -->
+        <div class="gallery-container w-2 h-6">
+            <div class="gallery-item">
+                <div class="image" id="80607" 
+                onclick="openModal(event); getArtwork(id, event)">
+                    <img src="images/vanGoghSelfPortrait_1954.326.jpg" 
+                    alt="Painting of a red-haired, bearded man with light skin, 
+                    painted in short brushstrokes and multicolored dots. The 
+                    background is likewise a mass of small, closely spaced colored 
+                    dots, these in green, blue, and red-orange." 
+                    >
+                </div>
+
+                <div class="text">
+                    Vincent Van Gogh:<br>Self Portrait
+                </div>
+            </div>
+        </div>
+         
+        <!-- Fig 3 - Monet: Water Lily Pond -->
+        <div class="gallery-container w-4 h-3">
+            <div class="gallery-item">
+                <div class="image" id="87088"
+                    onclick="openModal(event); getArtwork(this.id, event)">
+                    <img src="images/monetWaterLilyPond_1933.441.jpg" 
+                    alt="Painting of a small pond dense with pink water lilies, 
+                    their roots visible through the water, a railed footbridge 
+                    arching over the pond and lush, dark green folliage surrounding 
+                    it." >
+                </div>
+
+                <div class="text">
+                    Claude Monet:<br>Water Lily Pond
+                </div>
+            </div>
+        </div>
+          
+        <!-- Fig 4 - Van Gogh: The Poet's Garden -->
+        <div class="gallery-container w-2 h-3">
+            <div class="gallery-item">
+                <div class="image" id="14586"
+                    onclick="openModal(event); getArtwork(this.id, event)">
+                    <img src="images/vanGoghThePoetsGarden_1933.433.jpg" 
+                    alt="Lush tall grasses with small white flowers foreground a
+                    grove of bushy trees of varying types and heights, their leaves 
+                    ranging from deep green to golden. Beneath a dense and heavy 
+                    yellow sky, a small blue triangle suggesting a mountain peak 
+                    crests above the treeline at far left." >
+                </div>
+
+                <div class="text">
+                    Vincent Van Gogh:<br>The Poet's Garden
+                </div>
+            </div>
+        </div>
+            
+        <!-- Fig 5 - Hokusai: Under the Wave Off Kanagawa -->
+        <div class="gallery-container w-4 h-3">
+            <div class="gallery-item">
+                <div class="image" id="24645"
+                    onclick="openModal(event); getArtwork(this.id, event)">
+                    <img src="images/hokusaiUnderTheWaveOffKanagawa_1925.3245.jpg" 
+                    alt="A crashing wave looms over two small ships, Mount Fuji 
+                    in the background." >
+                </div>
+
+                <div class="text">
+                    Katsushika Hokusai:<br>Under the Wave Off Kanagawa
+                </div> 
+            </div>
+        </div>
+          
+        <!-- Fig 6 - Hokusai: Chrysanthemums and Bee -->
+        <div class="gallery-container w-2 h-6">
+            <div class="gallery-item">
+                <div class="image" id="25110"
+                    onclick="openModal(event); getArtwork(this.id, event)">
+                    <img src="images/hokusaiChrysanthemumsAndBee_1925.3373.jpg" 
+                    alt="A color woodblock print of pink, orange and yellow 
+                    chrysanthemums. In the upper rihgt a tiny bee flies above the 
+                    flowers. Signature and seals in the lower left corner." >
+                </div>
+
+                <div class="text">
+                    Katsushika Hokusai:<br>Chrysanthemums and Bee
+                </div>
+            </div>
+        </div>
+
+        <!-- div for modal --> 
+        <div id="myModal" class="modal">
+            <span class="closebtn" onclick="closeModal(event)">&times;</span>
+            <img class="modal-content" id="expandedImg">
+            <div id="info">
+
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
